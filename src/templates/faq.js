@@ -1,23 +1,19 @@
-/**
- * Created by vaibhav on 31/3/18
- */
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import Pricing from '../components/Pricing';
 
-export const PricingPageTemplate = ({
-                                        title,
-                                        meta_title,
-                                        meta_description,
-                                       pricing,
-                                    }) => (
-    <div>
+export const FaqPageTemplate = ({
+    title,
+    meta_title,
+    meta_description,
+   faq,
+}) => (
+<div>
         <Helmet>
             <title>{meta_title}</title>
             <meta name="description" content={meta_description}/>
         </Helmet>
-        <section className="hero is-primary">
+        <section className="hero is-primary ">
             <div className="hero-body">
                 <div className="container">
                     <div className="columns">
@@ -38,11 +34,9 @@ export const PricingPageTemplate = ({
                     <div className="columns">
                         <div className="column is-10 is-offset-1">
                             <div className="content">
-                                <h2 className="has-text-weight-semibold is-size-2">
-                                    {pricing.heading}
-                                </h2>
-                                <p className="is-size-5">{pricing.description}</p>
-                                <Pricing data={pricing.plans}/>
+                                
+                                <p className="is-size-5">{faq.description}</p>
+                                
                             </div>
                         </div>
                     </div>
@@ -52,31 +46,32 @@ export const PricingPageTemplate = ({
     </div>
 );
 
-PricingPageTemplate.propTypes = {
+FaqPageTemplate.propTypes = {
     title: PropTypes.string,
     meta_title: PropTypes.string,
     meta_description: PropTypes.string,
-    pricing: PropTypes.shape({
-        heading: PropTypes.string,
-        description: PropTypes.string,
-        plans: PropTypes.array,
+    toc: PropTypes.shape({
+        
+        description: PropTypes.string
+        
     }),
 };
 
-const PricingPage = ({data}) => {
+const FaqPage = ({data}) => {
     const {frontmatter} = data.markdownRemark;
 
     return (
-        <PricingPageTemplate
+        <FaqPageTemplate
             title={frontmatter.title}
             meta_title={frontmatter.meta_title}
             meta_description={frontmatter.meta_description}
-            pricing={frontmatter.pricing}
+            faq={frontmatter.faq}
         />
     )
 };
 
-PricingPage.propTypes = {
+
+FaqPage.propTypes = {
     data: PropTypes.shape({
         markdownRemark: PropTypes.shape({
             frontmatter: PropTypes.object,
@@ -84,24 +79,19 @@ PricingPage.propTypes = {
     }),
 };
 
-export default PricingPage;
+export default FaqPage;
 
-export const pricingPageQuery = graphql`
-  query PricingPage($id: String!) {
+export const faqPageQuery = graphql`
+  query FaqPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
         meta_title
         meta_description
-        pricing {
-          heading
+        faq {
+          
           description
-          plans {
-            description
-            items
-            plan
-            price
-          }
+          
         }
       }
     }

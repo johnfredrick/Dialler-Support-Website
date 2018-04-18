@@ -11,7 +11,7 @@ export const AboutPageTemplate = ({title, content, contentComponent}) => {
 
     return (
         <div>
-            <section className="hero is-primary is-bold">
+            <section className="hero is-primary ">
                 <div className="hero-body">
                     <div className="container">
                         <div className="columns">
@@ -32,6 +32,35 @@ export const AboutPageTemplate = ({title, content, contentComponent}) => {
                         <div className="column is-10 is-offset-1">
                             <div className="section">
                                 <PageContent className="content" content={content}/>
+                               
+                                <div className="box">
+                                  <div className="columns">
+                                      <div className="column">
+                                      <figure className="image is-64x64">
+                                       <img src="https://bulma.io/images/placeholders/128x128.png" alt="Image"/>
+                                      </figure>
+                                      </div>
+
+                                      <div className="column">
+                                        <figure className="image is-64x64">
+                                         <img src="https://bulma.io/images/placeholders/128x128.png" alt="Image"/>
+                                        </figure>
+                                      </div>
+
+                                      <div className="column">
+                                        <figure className="image is-64x64">
+                                         <img src="https://bulma.io/images/placeholders/128x128.png" alt="Image"/>
+                                       </figure>
+                                      </div>
+
+                                      <div className="column">
+                                        <figure className="image is-64x64">
+                                         <img src="https://bulma.io/images/placeholders/128x128.png" alt="Image"/>
+                                       </figure>
+                                      </div>
+                                  </div>
+                                </div>
+                                <h3 className="title">The Team</h3>
                             </div>
                         </div>
                     </div>

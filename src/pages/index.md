@@ -1,7 +1,7 @@
 ---
 templateKey: 'home-page'
-title: ICE Dialler Help&Support
-meta_title: Home | ICE Dialler Help&Support
+title: ICE Dialler Support
+meta_title: Home | ICE Dialler Support
 meta_description: >-
   Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
   ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam
@@ -9,8 +9,7 @@ meta_description: >-
   consectetur purus sit amet fermentum.
 heading: Lorem ipsum dolor sit amet
 description: >-
-  Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur,
-  adipisci velit...
+  This is the ICE Dialler official support website.Let us know what your experience has been using the ICE Dialler App.Tell us all about your pain points and improvements  we can make to the app to increase the quality of our product. 
 offerings:
   blurbs:
     - image: /img/coffee.png
@@ -56,12 +55,10 @@ offerings:
         In tempor, massa quis euismod convallis, felis elit sodales urna, at aliquet mi elit auctor 
         risus.
 testimonials:
-  - author: Vaibhav Sharma
+  - author: Stanley Okezie
     quote: >-
-      Donec scelerisque magna nec condimentum porttitor. Aliquam vel diam sed diam luctus pretium. 
-      Sed quis egestas libero. Vestibulum nec venenatis ligula. 
-  - author: Subarashi San
+      We are commited to delivering a world class service.
+  - author: Salim Haruna
     quote: >-
-      Fusce porttitor vulputate enim, nec blandit magna gravida et. Etiam et dignissim ligula. 
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+     We are all about excellence.
 ---

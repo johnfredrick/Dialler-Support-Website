@@ -21,7 +21,7 @@ export const HomePageTemplate = ({
             <title>{meta_title}</title>
             <meta name="description" content={meta_description}/>
         </Helmet>
-        <section className="hero is-primary is-bold">
+        <section className="hero is-primary ">
             <div className="hero-body">
                 <div className="container">
                     <div className="columns">
@@ -30,6 +30,8 @@ export const HomePageTemplate = ({
                                 <h1 className="title">
                                     {title}
                                 </h1>
+
+                                <h3 className="subtitle">{description}</h3>
                             </div>
                         </div>
                     </div>
@@ -47,7 +49,7 @@ export const HomePageTemplate = ({
                                     <h3 className="has-text-weight-semibold is-size-2">
                                         {heading}
                                     </h3>
-                                    <p>{description}</p>
+                                    <p>{offerings.blurbs.text}</p>
                                 </div>
                                 <Offerings gridItems={offerings.blurbs}/>
                                 <h2 className="has-text-weight-semibold is-size-2">Testimonials</h2>

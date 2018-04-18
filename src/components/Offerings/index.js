@@ -10,7 +10,9 @@ const Offerings = ({ gridItems }) => (
             <div key={item.image} className="column is-6" style={{borderRadius: '5px'}}>
                 <section className="section">
                     <p className="has-text-centered">
-                        <img alt="" src={item.image} />
+                    <span className="icon has-text-primary">
+                    <i className="fas fa-archive"></i>
+                    </span>
                     </p>
                     <p>{item.text}</p>
                 </section>
