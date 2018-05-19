@@ -2,13 +2,20 @@
  * Created by vaibhav on 31/3/18
  */
 import React from 'react';
-import LiveChat from 'react-livechat'
+//import LiveChat from 'react-livechat'
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import Content, {HTMLContent} from '../components/Content';
 
 export const AboutPageTemplate = ({title, content, contentComponent}) => {
     const PageContent = contentComponent || Content
+
+    // Wrap the require in check for window
+if (typeof window !== `undefined`) {
+  const LiveChat = require("react-livechat");
+}
+
+
 
     return (
         <div>
