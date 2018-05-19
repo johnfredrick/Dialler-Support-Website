@@ -7,11 +7,24 @@ import PropTypes from 'prop-types'
 const Testimonials = ({testimonials}) => (
     <div>
         {testimonials.map((testimonial, id) => (
-            <article className="message" key={id}>
-                <div className="message-body">
+            <article className="card article" key={id}>
+                <div className="card-content">
+                    <div className="media">
+                        <div className="media-center">
+                        <img src="http://www.radfaces.com/images/avatars/topanga-lawrence.jpg" className="author-image-float" alt="Placeholder image"/>
+                        
+                        </div>
+                        
+
+                    </div>
+
+                    <div className="content is-italic">
                     {testimonial.quote}
                     <br/>
-                    <cite> – {testimonial.author}</cite>
+                    <cite className="is-uppercase"> – {testimonial.author}</cite>
+                    </div>
+                   
+                    
                 </div>
             </article>
         ))}

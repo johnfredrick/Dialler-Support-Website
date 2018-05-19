@@ -6,7 +6,15 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import Offerings from '../components/Offerings';
 import Testimonials from '../components/Testimonials';
+import Link from 'gatsby-link'
 
+const titleArray = [
+    "About Us","Blog","Terms&Conditions","Contact Us",
+]
+const contentArray =
+[
+    "Find out more about the ICE Dialler Mobile Application and the team behind it on our about page Read the case study on what challenges the ICE Dialler solves","Our blog will keep you informed on all the information that pertains to the ICE Dialler mobile App such as when updates will be rolled out, guides on how to do certain things in the mobile App." 
+]
 export const HomePageTemplate = ({
                                      title,
                                      heading,
@@ -20,6 +28,7 @@ export const HomePageTemplate = ({
         <Helmet>
             <title>{meta_title}</title>
             <meta name="description" content={meta_description}/>
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.11/css/all.css" integrity="sha384-p2jx59pefphTFIpeqCcISO9MdVfIm4pNnsL08A6v5vaQc4owkQqxMV8kg4Yvhaw/" crossorigin="anonymous"/>
         </Helmet>
         <section className="hero is-primary ">
             <div className="hero-body">
@@ -30,36 +39,54 @@ export const HomePageTemplate = ({
                                 <h1 className="title">
                                     {title}
                                 </h1>
-
+                               
                                 <h3 className="subtitle">{description}</h3>
+                                <Link
+                                    className="button is-link is-outlined"
+                                    to='/contact'>
+                                    {/* Links to the mobile app playstore url */}
+                                    Download the mobile app
+                                    
+                                   </Link>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
         <section className="section section--gradient">
             <div className="container">
 
                 <div className="section">
                     <div className="columns">
                         <div className="column is-10 is-offset-1">
-                            <div className="content">
-                                <div>
-                                    <h3 className="has-text-weight-semibold is-size-2">
-                                        {heading}
-                                    </h3>
-                                    <p>{offerings.blurbs.text}</p>
-                                </div>
-                                <Offerings gridItems={offerings.blurbs}/>
+                            
+                        
+                              
+                                  
+                               
+                               
+                               
+                              
+                              
+                               
+                                {/* <Offerings gridItems={offerings.blurbs}/> */}
                                 <h2 className="has-text-weight-semibold is-size-2">Testimonials</h2>
                                 <Testimonials testimonials={testimonials}/>
-                            </div>
+                           
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        
+        <section className="section">
+            <div className="container">
+                
+          </div>
+        </section>
+
     </div>
 );
 
@@ -73,7 +100,7 @@ HomePageTemplate.propTypes = {
         blurbs: PropTypes.array,
     }),
     testimonials: PropTypes.array,
-
+    titleArray:PropTypes.array
 };
 
 const HomePage = ({data}) => {
@@ -109,9 +136,8 @@ export const pageQuery = graphql`
         title
         meta_title
         meta_description
-        heading
         description
-        offerings {
+         offerings {
           blurbs {
             image
             text

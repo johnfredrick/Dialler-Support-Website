@@ -6,10 +6,13 @@ import Link from 'gatsby-link'
 
 const NavBar = () => {
     return (
-        <nav className="navbar is-fixed-top is-primary" aria-label="main navigation">
+        <nav className="navbar is-fixed-top" aria-label="main navigation">
             <div className="navbar-brand">
                 <Link to="/" className="navbar-item">
-                    ICE Dialler
+                    
+                    <div style={{fontSize: "1em",color: "green",paddingLeft: "0.2em"}}>
+                    <i className="fab fa-accusoft"></i>
+                                   </div> 
                 </Link>
                 <button className="button navbar-burger" data-target="navMenu">
                     <span/>
@@ -20,25 +23,33 @@ const NavBar = () => {
             <div className="navbar-menu" id="navMenu">
                 <div className="navbar-start">
                    
-                    <Link className="navbar-item" to="/about">
+                    <Link className="navbar-item is-uppercase" to="/about">
                         About
+                        
                     </Link>
                     <Link className="navbar-item" to="/faq">
                         FAQ
+                        
                     </Link>
-                    <Link className="navbar-item" to="/toc">
+                    <Link className="navbar-item is-uppercase" to="/toc">
                         Terms & Conditions
+                        
                     </Link>
-                    
+                    <Link className="navbar-item is-uppercase" to="/blog">
+                        Blog
+
+                    </Link>
+
                 </div>
                 <div className="navbar-end">
                     <div className="navbar-item">
                         <div className="field is-grouped">
                             <p className="control">
                                 <Link
-                                    className="button is-primary is-outlined"
+                                    className="button is-link is-outlined"
                                     to='/contact'>
                                     Contact Us
+                                    
                                 </Link>
                             </p>
                         </div>

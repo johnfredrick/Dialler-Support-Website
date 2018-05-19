@@ -17,7 +17,7 @@ export default class BlogPage extends Component {
                 <Helmet>
                     <title>Blog | Gatsby Starter Business</title>
                 </Helmet>
-                <section className="hero is-primary is-bold">
+                <section className="hero is-primary">
                     <div className="hero-body">
                         <div className="container">
                             <div className="columns">

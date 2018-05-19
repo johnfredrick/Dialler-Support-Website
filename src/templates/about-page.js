@@ -31,36 +31,49 @@ export const AboutPageTemplate = ({title, content, contentComponent}) => {
                     <div className="columns">
                         <div className="column is-10 is-offset-1">
                             <div className="section">
-                                <PageContent className="content" content={content}/>
-                               
-                                <div className="box">
-                                  <div className="columns">
-                                      <div className="column">
-                                      <figure className="image is-64x64">
-                                       <img src="https://bulma.io/images/placeholders/128x128.png" alt="Image"/>
-                                      </figure>
-                                      </div>
-
-                                      <div className="column">
-                                        <figure className="image is-64x64">
-                                         <img src="https://bulma.io/images/placeholders/128x128.png" alt="Image"/>
-                                        </figure>
-                                      </div>
-
-                                      <div className="column">
-                                        <figure className="image is-64x64">
-                                         <img src="https://bulma.io/images/placeholders/128x128.png" alt="Image"/>
-                                       </figure>
-                                      </div>
-
-                                      <div className="column">
-                                        <figure className="image is-64x64">
-                                         <img src="https://bulma.io/images/placeholders/128x128.png" alt="Image"/>
-                                       </figure>
-                                      </div>
-                                  </div>
+                            <div className="card article">
+                                <div className="card-content">
+                                    <div className="media">
+                                        <div className="media-center">
+                                        <img src="http://www.radfaces.com/images/avatars/daria-morgendorffer.jpg" className="author-image" alt="Placeholder image"/>
+                                        </div>
+                                        <div className="media-content has-text-centered">
+                                            <p className="title article-title">Haruna Salim</p>
+                                            <p className="subtitle is-6">ASP.Net Developer</p>
+                                        </div>
+                                    </div>
+                                    <div className="content article-body">
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                                        Quam, nisi reprehenderit facere maxime maiores illo consequatur, ullam delectus reiciendis doloribus, quae ut praesentium? 
+                                        Ab inventore sapiente labore qui at. Dignissimos.
+                                    </div>
                                 </div>
-                                <h3 className="title">The Team</h3>
+                            </div>
+
+
+                            <div className="card article">
+                                <div className="card-content">
+                                    <div className="media">
+                                        
+                                        <div className="media-center">
+                                        <img src="http://www.radfaces.com/images/avatars/topanga-lawrence.jpg" className="author-image" alt="Placeholder image"/>
+                                        </div>
+                                        <div className="media-content has-text-centered">
+                                        <p className="title article-title">Asalu Tolulope</p>
+                                            <p className="subtitle is-6">Xamarin Developer</p>
+                                        </div>
+                                    </div>
+                                    <div className="content article-body">
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                                        Quam, nisi reprehenderit facere maxime maiores illo consequatur, ullam delectus reiciendis doloribus, quae ut praesentium? 
+                                        Ab inventore sapiente labore qui at. Dignissimos.
+                                    </div>
+                                </div>
+                            </div>
+                                {/* <PageContent className="content is-size-5" content={content}/> */}
+                               
+                             
+                               
                             </div>
                         </div>
                     </div>

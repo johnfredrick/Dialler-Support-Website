@@ -10,7 +10,5 @@ meta_description: >-
 
 toc:
  description: >-
-   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta justo justo, 
-    non semper odio cursus in. Curabitur ligula tortor, tristique non odio nec, imperdiet 
-    mattis leo. Vivamus aliquam rhoncus tortor vitae convallis. Aliquam non dui nibh. Nam 
-    a velit at enim sagittis pellentesque.
+  The ICE Dialler will not disclose personal user information such as location or contact information.
+  The ICE Dialler does however require some dangerous permissions such as messaging(for sending emergency response messages), calls(for placing calls to your profiled emergency numbers.)
