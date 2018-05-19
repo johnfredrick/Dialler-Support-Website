@@ -6,6 +6,7 @@ import LiveChat from 'react-livechat'
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import Content, {HTMLContent} from '../components/Content';
+const windowGlobal = typeof window !== 'undefined' && window;
 
 export const AboutPageTemplate = ({title, content, contentComponent}) => {
     const PageContent = contentComponent || Content
