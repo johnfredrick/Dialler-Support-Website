@@ -2,7 +2,7 @@
  * Created by vaibhav on 31/3/18
  */
 import React from 'react';
-import LiveChat from 'react-livechat'
+//import LiveChat from 'react-livechat'
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import Content, {HTMLContent} from '../components/Content';
@@ -10,6 +10,16 @@ import Content, {HTMLContent} from '../components/Content';
 export const AboutPageTemplate = ({title, content, contentComponent}) => {
     const PageContent = contentComponent || Content
 
+    if ((typeof window != "undefined")) {
+
+        const LiveChat = require("react-livechat");
+    
+        return (
+             <LiveChat license={9773880} />
+        );
+      } else {
+        return null;
+      }
     return (
         <div>
             <section className="hero is-primary ">
@@ -72,7 +82,7 @@ export const AboutPageTemplate = ({title, content, contentComponent}) => {
                                 </div>
                             </div>
 
-                            <LiveChat license={9773880} />
+                            
                                 {/* <PageContent className="content is-size-5" content={content}/> */}
                                
                              
