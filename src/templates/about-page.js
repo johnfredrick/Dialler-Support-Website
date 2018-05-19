@@ -2,10 +2,7 @@
  * Created by vaibhav on 31/3/18
  */
 import React from 'react';
-if (typeof window !== `undefined`) {
-    import LiveChat from 'react-livechat'
-  }
-
+import LiveChat from 'react-livechat'
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import Content, {HTMLContent} from '../components/Content';
